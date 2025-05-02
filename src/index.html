@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Kanban</title>
+</head>
+
+<body>
+    <!-- filtros kanban -->
+    <div class="filters">
+        <div class="filter-group">
+            <label for="status-filter">Filtrar por Status:</label>
+            <select id="status-filter">
+                <option value="all">Todos</option>
+                <option value="1">Aberto</option>
+                <option value="2">Em Andamento</option>
+                <option value="3">Concluído</option>
+                <option value="4">Done Done</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="search-filter">Buscar por Título:</label>
+            <input type="text" id="search-filter" placeholder="Digite o título...">
+        </div>
+        <button id="reset-filters">Limpar Filtros</button>
+    </div>
+
+    <!-- cards kanban -->
+    <main class="kanban">
+        <div class="kanban-column" data-id="1">
+            <div class="kanban-title">
+                <h2>
+                    <b>
+                        Aberto <span class="card-count"></span>
+                    </b>
+                </h2>
+                <button class="add-card">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="kanban-cards">
+                <div class="kanban-card" draggable="true">
+                    <div class="badge medium">
+                        <span>
+                            <b>Média prioridade</b>
+                        </span>
+                    </div>
+                    <p class="card-title">
+                        <b>
+                            Criar Texto <span class="card-count"></span>
+                        </b>
+                    </p>
+                    <h5>Inicialização da criação do texto</h5>
+                    <div>
+                        <input type="checkbox">
+                        <span> <b>concluido</b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="kanban-column" data-id="2">
+            <div class="kanban-title">
+                <h2>
+                    <b>
+                        Em Andamento <span class="card-count"></span>
+                    </b>
+                </h2>
+                <button class="add-card">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="kanban-cards">
+                <div class="kanban-card" draggable="true">
+                    <div class="badge high">
+                        <span>
+                            <b>Alta prioridade</b>
+                        </span>
+                    </div>
+                    <p class="card-title">
+                        <b>
+                            Converter Texto
+                        </b>
+                    </p>
+                    <h5>Em andamento do processo de criação e conversão do texto em áudio</h5>
+                    <div>
+                        <input type="checkbox">
+                        <span> <b>concluido</b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="kanban-column" data-id="3">
+            <div class="kanban-title">
+                <h2>
+                    <b>
+                        Concluido <span class="card-count">0</span>
+                    </b>
+                </h2>
+                <button class="add-card">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="kanban-cards">
+                <div class="kanban-card" draggable="true">
+                    <div class="badge low">
+                        <span>
+                            <b>Baixa prioridade</b>
+                        </span>
+                    </div>
+                    <p class="card-title">
+                        <b>Revisão</b>
+                    </p>
+                    <h5>Fase de revisão e testes das tarefas</h5>
+                    <div>
+                        <input type="checkbox">
+                        <span> <b>concluido</b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="kanban-column" data-id="4">
+            <div class="kanban-title">
+                <h2>
+                    <b>
+                        Done Done <span class="card-count">0</span>
+                    </b>
+                </h2>
+                <button class="add-card">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="kanban-cards">
+                <div class="kanban-card" draggable="true">
+                    <div class="badge high">
+                        <span>
+                            <b>Alta prioridade</b>
+                        </span>
+                    </div>
+                    <p class="card-title">
+                        <b>Finalizar</b>
+                    </p>
+                    <h5>Conclusão de todo o processo</h5>
+                    <div>
+                        <input type="checkbox">
+                        <span> <b>concluido</b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./javascript/script.js"></script>
+    
+</body>
+</html>
+
+
+
+
